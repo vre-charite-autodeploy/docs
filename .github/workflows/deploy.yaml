@@ -1,0 +1,40 @@
+name: Deploy MkDocs GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-material PyYAML requests
+
+      - name: Fetch documentation from org
+        run: python fetch_docs.py vre-charite-autodeploy
+
+      - name: Build the MkDocs site
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: site
+          clean: true
