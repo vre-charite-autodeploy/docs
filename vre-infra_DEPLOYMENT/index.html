@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>vre-infra - DEPLOYMENT.md - VRE Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "vre-infra - DEPLOYMENT.md";
+        var mkdocs_page_input_path = "vre-infra_DEPLOYMENT.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> VRE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">VRE Charité Repositories</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../helm-charts/">helm-charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vre-infra/">vre-infra</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../frontend_vre_home/">frontend_vre_home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_entityinfo/">service_entityinfo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../library_common/">library_common</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_scheduled_tasks/">service_scheduled_tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataops_gr/">service_dataops_gr</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataops_utility/">service_dataops_utility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_auth/">service_auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_download/">service_download</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_pipelinewatch/">service_pipelinewatch</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_common/">service_common</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataset_neo4j/">service_dataset_neo4j</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_encryption/">service_encryption</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_notification/">service_notification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_approval/">service_approval</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataset/">service_dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_provenance/">service_provenance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_upload/">service_upload</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_kg/">service_kg</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_hpc/">service_hpc</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_cataloguing/">service_cataloguing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_queue/">service_queue</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_logger/">service_logger</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../docs/">docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../release-archive/">release-archive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../.github/">.github</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Documentation Files</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">vre-infra - DEPLOYMENT.md</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../docs_vre-documentation/">docs - vre-documentation.md</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">VRE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Additional Documentation Files</li>
+      <li class="breadcrumb-item active">vre-infra - DEPLOYMENT.md</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="vre-infra-deploymentmd">vre-infra - DEPLOYMENT.md</h1>
+<h1 id="vre-deployment">VRE DEPLOYMENT</h1>
+<h2 id="requirements">REQUIREMENTS</h2>
+<ul>
+<li>[ ] A Kubernetes cluster</li>
+<li>[ ] Local tools installed for deploying</li>
+<li>[ ] Valid Github Personal Access Token (PAT)</li>
+</ul>
+<details><summary><b>Kubernetes</b></summary>
+
+* [ ] Any kubernetes cluster (vanilla or from a distribution, <= 1.29.X) + accessible via kubeconfig from the machine you want deploy vre from
+* [ ] Storageprovider/class (RMO/RWX) is already configured on the cluster (PVC can be created / will be bound)
+* [ ] Services from LoadBalancer can be created (e.g. Cloud Provider based, HW, CiliumLB or MetalLB is installed on cluster and/or configured)
+
+</details>
+
+<details><summary><b>Tools</b></summary>
+
+| Tool       | Example Version | Download Link                                                        | Used For                                                                 |
+|------------|----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------|
+| Terraform  | v1.10.5         | [Terraform Downloads](https://www.terraform.io/downloads.html)        | Automates the provisioning and configuration of VRE.       |
+| Helm       | v3.17.0         | [Helm Install](https://helm.sh/docs/intro/install/)                    | Verify Helm Releases. |
+| Kubectl    | v1.32.3         | [Kubectl Downloads](https://kubernetes.io/docs/tasks/tools/)           | Provides command-line control over the Kubernetes clusters.                  |
+| k9s        | v0.40.5         | [k9s Releases](https://github.com/derailed/k9s/releases)               | Offers a terminal UI to monitor and troubleshoot Kubernetes resources.   |
+
+</details>
+
+<details><summary><b>Token</b></summary>
+
+To create a Personal Access Token on GitHub with the required permissions:
+
+* Log in to your GitHub account.
+* Click your profile picture in the top-right corner and select Settings.
+* In the left sidebar, scroll down to Developer settings.
+* Choose Personal access tokens, then:
+  * click Tokens (classic) and then Generate new token.
+  * After that, select the permissions you need (such as repo, workflow, write:packages, etc.), and then generate the token. Copy and store it securely.
+
+
+<pre><code class="language-bash">Repository Permissions (repo)
+✅ repo (Full control of private repositories)
+✅ repo:status (Access commit status)
+✅ repo_deployment (Access deployment status)
+✅ public_repo (Access public repositories)
+✅ repo:invite (Access repository invitations)
+✅ security_events (Read and write security events)
+✅ read:repo_hook (Read repository hooks)
+
+Workflow Permissions
+✅ workflow (Update GitHub Action workflows)
+
+Packages Permissions
+✅ write:packages (Upload packages to GitHub Package Registry)
+✅ read:packages (Download packages from GitHub Package Registry)
+
+Organization Permissions
+✅ manage_runners:org (Manage org runners and runner groups)
+</code></pre>
+
+
+</details>
+
+<h2 id="preparation">PREPARATION</h2>
+<details><summary><b>CLONE REPO</b></summary>
+
+
+<pre><code class="language-bash">git clone https://github.com/vre-charite-dev/vre-infra.git
+cd vre-infra
+</code></pre>
+
+
+<details><summary>OPTIONAL: CLONE BY TAG</summary>
+
+
+<pre><code class="language-bash"># ONCE / IF THERE ARE TAGS YOU COULD SWITCH THAT WAY TO A RELEASED VERSION
+git checkout tags/&lt;tag-name&gt;
+</code></pre>
+
+
+</details>
+
+<details><summary>OPTIONAL: CHECKOUT A SPECIFC HASH FROM COMMIT HISTORY</summary>
+
+
+<pre><code class="language-bash">git checkout &lt;commit-hash&gt;
+</code></pre>
+
+
+</details>
+
+</details>
+
+<h2 id="configuration">CONFIGURATION</h2>
+<details><summary>OPTION A: EDIT EXISTING CONFIGURATION FILE</summary>
+
+
+<pre><code class="language-bash"># EDIT FILE / MAKE CHANGES e.g
+vi ./terraform/config/charite/charite.tfvars
+</code></pre>
+
+
+</details>
+
+<details><summary>OPTION B: CREATE NEW ENVIORONMENT / CONFIGURATION FILE</summary>
+
+
+<pre><code class="language-bash">ENV=production # just an example name
+PATH_DEFAULT_CONFIG=./terraform/config/charite/charite.tfvars
+PATH_NEW_CONFIG=./terraform/config/${ENV}/${ENV}.tfvars
+
+# CREATE FOLDER FOR ENV
+mkdir -p ./terraform/config/${ENV}/
+cp ${PATH_DEFAULT_CONFIG} ${PATH_NEW_CONFIG}
+# EDIT FILE / MAKE CHANGES e.g.
+vi ${PATH_NEW_CONFIG}
+</code></pre>
+
+
+</details>
+
+<h2 id="secrets">SECRETS</h2>
+<details><summary>OPTION A: ADD SECRETS TO ENV</summary>
+
+
+<pre><code class="language-bash">export TF_VAR_ghcr_token=&quot;${GITHUB_USERNAME}:${GITHUB_TOKEN}&quot;
+export TF_VAR_vault_token=&quot;&quot;
+export TF_VAR_kubeconfig=/path/to/kube/config
+</code></pre>
+
+
+</details>
+
+<details><summary>OPTION B: ADD NEEDED SECRETS TO A FILE (SECRETS.AUTO.TFVARS)</summary>
+
+
+<pre><code class="language-bash"># CREATE THE SECRETS.AUTO.TFVARS FILE IN THE TERRAFORM FOLDERS
+GITHUB_USERNAME=&quot;&lt;CHANGE-ME&gt;&quot;
+GITHUB_TOKEN=&quot;&lt;CHANGE-ME&gt;&quot;
+VAULT_TOKEN=&quot;&lt;CHANGE-ME&gt;&quot;
+
+FOLDERS=(&quot;pre-install&quot; &quot;install&quot; &quot;intermediary-install&quot; &quot;post-install&quot;)
+
+for TF_FOLDER in &quot;${FOLDERS[@]}&quot;; do
+  cat &lt;&lt;EOF &gt; &quot;./terraform/${TF_FOLDER}/secrets.auto.tfvars&quot;
+ghcr_token  = &quot;${GITHUB_USERNAME}:${GITHUB_TOKEN}&quot;
+vault_token = &quot;${VAULT_TOKEN}&quot;
+EOF
+
+done
+</code></pre>
+
+
+</details>
+
+<h2 id="deployment">DEPLOYMENT</h2>
+<details><summary><b>OPTION A: APPLY VRE - ALL AT ONCE</b></summary>
+
+
+<pre><code class="language-bash">PATH_CONFIG=./terraform/config/charite/charite.tfvars # or change to a newly created env config file
+FOLDERS=(&quot;pre-install&quot; &quot;install&quot; &quot;intermediary-install&quot; &quot;post-install&quot;)
+VAR_FILE=${PATH_CONFIG}
+
+for TF_FOLDER in &quot;${FOLDERS[@]}&quot;; do
+  terraform -chdir=./terraform/${TF_FOLDER} init
+  terraform -chdir=./terraform/${TF_FOLDER} apply --auto-approve -var-file=${VAR_FILE}
+done
+</code></pre>
+
+
+</details>
+
+<details><summary><b>OPTION B: APPLY VRE - ONE BY ONE</b></summary>
+
+### 1. PRE-INSTALL
+
+pre-install creates:
+  * cert-manager, ingress, observability, etc.
+  * multiple secrets for authentication (regcred and vault-secret across various namespaces)
+  * two Helm releases (cert-manager and trust-manager)
+
+<details><summary><b>Apply pre-install</b></summary>
+
+
+<pre><code class="language-bash">cd ./terraform/pre-install
+terraform init
+terraform apply --auto-approve
+</code></pre>
+
+
+</details>
+
+<details><summary><b>Verify pre-install w/ kubectl+helm</b></summary>
+
+
+<pre><code class="language-bash">export KUBECONFIG=/path/to/kube/config
+# GENERAL
+kubectl get namespaces
+# EXAMPLE CHECKS
+kubectl get namespace cert-manager ingress observability
+kubectl get secret regcred -n cert-manager
+kubectl describe secret regcred -n cert-manager
+# GENERAL
+helm list -A
+# EXAMPLE CHECKS
+helm status cert-manager -n cert-manager
+helm status trust-manager -n cert-manager
+kubectl get pods -n cert-manager
+kubectl get pods -n ingress
+kubectl get pods -n observability
+</code></pre>
+
+
+</details>
+
+### 2. INTERMEDIARY-INSTALL
+
+intermediary-install creates:
+  * cert-manager resources, including a self-signed issuer, a root certificate + cluster issuer
+  * server certificates were generated for the operator and a MinIO tenant
+  * jaeger operator
+
+<details><summary><b>Apply intermediary-install</b></summary>
+
+
+<pre><code class="language-bash">cd ./terraform/intermediary-install # or cd ../intermediary-install changing from previous apply operation
+terraform init
+terraform apply --auto-approve
+</code></pre>
+
+
+</details>
+
+<details><summary><b>Verify intermediary-install w/ kubectl+helm</b></summary>
+
+
+<pre><code class="language-bash"># List all ClusterIssuers and Issuers
+kubectl get clusterissuers,issuers -A
+# Describe a specific ClusterIssuer
+kubectl describe clusterissuer &lt;issuer-name&gt;
+# List all Certificates
+kubectl get certificates -A
+# Describe a specific Certificate
+kubectl describe certificate &lt;certificate-name&gt; -n &lt;namespace&gt;
+# Check CertificateRequest status
+kubectl get certificaterequests -A
+# List Secrets to confirm certificates were created
+kubectl get secrets -A | grep tls
+# Inspect a specific TLS secret
+kubectl describe secret &lt;secret-name&gt; -n &lt;namespace&gt;
+# Check Helm releases
+helm list -A | grep jaeger
+# Get detailed status of Jaeger Operator Helm release
+helm status jaeger -n &lt;namespace&gt;
+# Check Jaeger Operator pods
+kubectl get pods -n &lt;namespace&gt; | grep jaeger
+# Describe Jaeger Operator deployment
+kubectl describe deployment jaeger-operator -n &lt;namespace&gt;
+# Check logs for troubleshooting
+kubectl logs -l app.kubernetes.io/name=jaeger-operator -n &lt;namespace&gt;
+</code></pre>
+
+
+</details>
+
+### 3. INSTALL
+
+install creates:
+
+* Core Services: Kong, Redis, Elasticsearch, Neo4j, OpenLDAP, MinIO.
+* Application Services: Approval, Encryption, Cataloguing, Dataset, Provenance, Notification, etc.
+* Utility Services: Mailhog, Queue Consumer, Queue Producer, Pipeline Watch, etc.
+
+<details><summary><b>Apply install</b></summary>
+
+
+<pre><code class="language-bash">cd ./terraform/install # or cd ../install changing from previous apply operation
+terraform init
+terraform apply --auto-approve -var-file=&quot;../config/charite/charite.tfvars&quot;
+</code></pre>
+
+
+</details>
+
+<details><summary><b>Verify install w/ kubectl+helm</b></summary>
+
+
+<pre><code class="language-bash"># List All Helm Releases
+helm list --all-namespaces
+# Check Resources for a Specific Helm Release
+helm status &lt;release-name&gt; -n &lt;namespace&gt;
+# Example Commands for Specific Releases
+helm status kong -n &lt;namespace&gt;
+kubectl get pods -n &lt;namespace&gt; -l app.kubernetes.io/instance=kong
+helm status redis -n &lt;namespace&gt;
+kubectl get services -n &lt;namespace&gt; -l app.kubernetes.io/instance=redis
+kubectl get configmaps -n &lt;namespace&gt; -l app.kubernetes.io/instance=&lt;release-name&gt;
+kubectl get secrets -n &lt;namespace&gt; -l app.kubernetes.io/instance=&lt;release-name&gt;
+kubectl get pv
+kubectl get pvc -n &lt;namespace&gt;
+</code></pre>
+
+
+</details>
+
+### 4. POST-INSTALL
+
+post-install creates:
+
+* Atlas: ConfigMap and Job for Atlas configuration.
+* Elasticsearch and Kong: ConfigMaps and Jobs for Elasticsearch and Kong setup.
+* Keycloak:
+  * A new realm (vre).
+  * Multiple OpenID clients (react_app_client, minio_client, kong_client).
+  * Roles (platform_admin, admin_role).
+  * Protocol mappers for client configurations.
+  * A user (admin_user) with assigned roles.
+  * Service account roles and client default scopes.
+
+<details><summary><b>Apply post-install</b></summary>
+
+
+<pre><code class="language-bash">CONFIG_FILE=&quot;../config/charite/charite.tfvars&quot; # example
+cd ./terraform/post-install # or cd ../post-install changing from previous apply operation
+terraform init
+terraform apply --auto-approve -var-file=&quot;${CONFIG_FILE}
+</code></pre>
+
+
+</details>
+
+<details><summary><b>Verify post-install w/ kubectl+helm</b></summary>
+
+
+<pre><code class="language-bash"># Check Atlas ConfigMap
+kubectl get configmap atlas-custom-entity -n utility
+# Check Elasticsearch ConfigMap
+kubectl get configmap elasticsearch-index-configmap -n &lt;namespace&gt;
+# Check Elasticsearch Job
+kubectl get job elasticsearch-index-job -n &lt;namespace&gt;
+# Check Kong ConfigMap
+kubectl get configmap kong-configmap -n &lt;namespace&gt;
+# Check Kong Job
+kubectl get job kong-job -n &lt;namespace&gt;
+# Check Atlas Job
+kubectl get job atlas-config-job -n utility
+# Verify Keycloak Realm (vre)
+kubectl exec -it &lt;keycloak-pod&gt; -n &lt;namespace&gt; -- /opt/keycloak/bin/kcadm.sh get realms/vre
+# Verify OpenID Clients
+kubectl exec -it &lt;keycloak-pod&gt; -n &lt;namespace&gt; -- /opt/keycloak/bin/kcadm.sh get clients -r vre
+# Verify Client Default Scopes
+kubectl exec -it &lt;keycloak-pod&gt; -n &lt;namespace&gt; -- /opt/keycloak/bin/kcadm.sh get clients/&lt;client-id&gt;/default-client-scopes -r vre
+</code></pre>
+
+
+</details>
+
+</details>
+
+<h3 id="troubleshooting-terraform">TROUBLESHOOTING TERRAFORM</h3>
+<details><summary><b>Check Terraform Output</b></summary>
+
+Terraform usually provides error messages when a run fails. Review the output:
+
+
+<pre><code class="language-sh">terraform apply --auto-approve
+</code></pre>
+
+
+To capture the output into a file for easier review:
+
+
+<pre><code class="language-sh">terraform apply --auto-approve | tee terraform_output.log
+</code></pre>
+
+
+</details>
+
+<details><summary><b>Verify Environment Variables</b></summary>
+
+
+<pre><code class="language-bash">echo $GITHUB_USERNAME
+echo $GITHUB_TOKEN | sed 's/./*/g'  # Masked output for security
+echo $VAULT_TOKEN | sed 's/./*/g'
+</code></pre>
+
+
+Alternatively, use a .env file and source it:
+
+
+<pre><code class="language-bash">source .env
+</code></pre>
+
+
+</details>
+
+<details><summary><b>Validate Terraform Configuration</b></summary>
+
+Check for syntax or structural errors in the Terraform files:
+
+
+<pre><code class="language-bash">terraform validate
+</code></pre>
+
+
+If validation passes but apply still fails, check the execution plan:
+
+
+<pre><code class="language-bash">terraform plan
+</code></pre>
+
+
+</details>
+
+<details><summary><b>Enable Debug Logging</b></summary>
+
+For more details on the error, enable debug logging:
+
+
+<pre><code class="language-bash">export TF_LOG=DEBUG
+terraform apply --auto-approve 2&gt;&amp;1 | tee terraform_debug.log
+</code></pre>
+
+
+</details>
+
+<details><summary><b>Restart Terraform from Scratch</b></summary>
+
+If troubleshooting doesn’t resolve the issue, reset Terraform and try again:
+
+
+<pre><code class="language-bash">terraform destroy --auto-approve  # Destroy existing resources
+rm -rf .terraform/ terraform.tfstate*  # Delete local state
+terraform init
+terraform apply --auto-approve
+</code></pre>
+
+
+</details>
+
+<h3 id="uninstall">UNINSTALL</h3>
+<details><summary><b>OPTION A: DESTROY VRE - ALL AT ONCE</b></summary>
+
+
+<pre><code class="language-bash">PATH_CONFIG=$(pwd)/terraform/config/charite/charite.tfvars # or change to a newly created env config file
+FOLDERS=(&quot;post-install&quot; &quot;install&quot; &quot;intermediary-install&quot; &quot;pre-install&quot;)
+VAR_FILE=${PATH_CONFIG}
+
+for TF_FOLDER in &quot;${FOLDERS[@]}&quot;; do
+  echo destroying ${TF_FOLDER}
+  terraform -chdir=./terraform/${TF_FOLDER} destroy --auto-approve -var-file=${VAR_FILE}
+  echo destroy ${TF_FOLDER} complete!
+done
+</code></pre>
+
+
+</details>
+
+<details><summary><b>OPTION B: DESTROY SPECIFIC VRE DEPLOYMENT STEP</b></summary>
+
+
+<pre><code class="language-bash">CONFIG_FILE=&quot;../config/charite/charite.tfvars&quot; # example, needed for at least install &amp; post-install steps
+cd ./terraform/&lt;INSTALL-NAME&gt; # e.g. install or post-install
+terraform destroy --auto-approve -var-file=&quot;${CONFIG_FILE}
+</code></pre>
+
+
+
+</details>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.github/" class="btn btn-neutral float-left" title=".github"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../docs_vre-documentation/" class="btn btn-neutral float-right" title="docs - vre-documentation.md">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.github/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../docs_vre-documentation/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

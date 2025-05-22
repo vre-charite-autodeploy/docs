@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>frontend_vre_home - VRE Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "frontend_vre_home";
+        var mkdocs_page_input_path = "frontend_vre_home.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> VRE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">VRE Charité Repositories</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../helm-charts/">helm-charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vre-infra/">vre-infra</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">frontend_vre_home</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#learn-more">Learn More</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deploy-on-vercel">Deploy on Vercel</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_entityinfo/">service_entityinfo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../library_common/">library_common</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_scheduled_tasks/">service_scheduled_tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataops_gr/">service_dataops_gr</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataops_utility/">service_dataops_utility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_auth/">service_auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_download/">service_download</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_pipelinewatch/">service_pipelinewatch</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_common/">service_common</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataset_neo4j/">service_dataset_neo4j</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_encryption/">service_encryption</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_notification/">service_notification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_approval/">service_approval</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataset/">service_dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_provenance/">service_provenance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_upload/">service_upload</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_kg/">service_kg</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_hpc/">service_hpc</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_cataloguing/">service_cataloguing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_queue/">service_queue</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_logger/">service_logger</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../docs/">docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../release-archive/">release-archive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../.github/">.github</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Documentation Files</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../vre-infra_DEPLOYMENT/">vre-infra - DEPLOYMENT.md</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../docs_vre-documentation/">docs - vre-documentation.md</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">VRE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">VRE Charité Repositories</li>
+      <li class="breadcrumb-item active">frontend_vre_home</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="frontend_vre_home">frontend_vre_home</h1>
+<!--
+ Copyright 2022 Indoc Research
+
+ Licensed under the EUPL, Version 1.2 or – as soon they
+ will be approved by the European Commission - subsequent
+ versions of the EUPL (the "Licence");
+ You may not use this work except in compliance with the
+ Licence.
+ You may obtain a copy of the Licence at:
+
+ https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+
+ Unless required by applicable law or agreed to in
+ writing, software distributed under the Licence is
+ distributed on an "AS IS" basis,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ express or implied.
+ See the Licence for the specific language governing
+ permissions and limitations under the Licence.
+
+-->
+
+<p>This is a <a href="https://nextjs.org/">Next.js</a> project bootstrapped with <a href="https://github.com/vercel/next.js/tree/canary/packages/create-next-app"><code>create-next-app</code></a>.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>First, run the development server:</p>
+<pre><code class="language-bash">npm run dev
+# or
+yarn dev
+</code></pre>
+<p>Open <a href="http://localhost:3000">http://localhost:3000</a> with your browser to see the result.</p>
+<p>You can start editing the page by modifying <code>pages/index.tsx</code>. The page auto-updates as you edit the file.</p>
+<p><a href="https://nextjs.org/docs/api-routes/introduction">API routes</a> can be accessed on <a href="http://localhost:3000/api/hello">http://localhost:3000/api/hello</a>. This endpoint can be edited in <code>pages/api/hello.ts</code>.</p>
+<p>The <code>pages/api</code> directory is mapped to <code>/api/*</code>. Files in this directory are treated as <a href="https://nextjs.org/docs/api-routes/introduction">API routes</a> instead of React pages.</p>
+<h2 id="learn-more">Learn More</h2>
+<p>To learn more about Next.js, take a look at the following resources:</p>
+<ul>
+<li><a href="https://nextjs.org/docs">Next.js Documentation</a> - learn about Next.js features and API.</li>
+<li><a href="https://nextjs.org/learn">Learn Next.js</a> - an interactive Next.js tutorial.</li>
+</ul>
+<p>You can check out <a href="https://github.com/vercel/next.js/">the Next.js GitHub repository</a> - your feedback and contributions are welcome!</p>
+<h2 id="deploy-on-vercel">Deploy on Vercel</h2>
+<p>The easiest way to deploy your Next.js app is to use the <a href="https://vercel.com/new?utm_medium=default-template&amp;filter=next.js&amp;utm_source=create-next-app&amp;utm_campaign=create-next-app-readme">Vercel Platform</a> from the creators of Next.js.</p>
+<p>Check out our <a href="https://nextjs.org/docs/deployment">Next.js deployment documentation</a> for more details.</p>
+<h1 id="coding-standards">coding standards</h1>
+<h2 id="folder">Folder</h2>
+<pre><code class="language-jsx">- components
+    - Common // for shared component
+    - About
+        - AboutHeader
+            - AboutHeader.tsx
+            - AboutHeader.module.scss
+        - AboutFooter
+            - AboutFooter.tsx
+            - AboutFooter.module.scss
+- pages
+    - index.tsx
+    - about
+        - index.tsx
+        - index.module.scss
+        - about-sub
+            - index.tsx
+            - index.module.scss
+</code></pre>
+<ul>
+<li>for pages, all folder and <code>.tsx</code> files are <code>kebab-case</code>. For each route, defined a folder for that route, and create <code>index.tsx</code> for the page. directly use <code>about/about-sub.tsx</code> is not recommended, since we may introduce style file or test file for that <code>.tsx</code> in the  future.</li>
+<li>Components are grouped by page in the <code>compoents</code> folder. For example, <code>component/About</code> contains all the components for <code>about</code> page. All the folders in <code>component/About</code> are flatten. That means each component has its own folder, and each folder only contains one component without nested folders. All folder and <code>.tsx</code> file in <code>components</code> are <code>PascalCase</code> .</li>
+</ul>
+<h2 id="react-component">React Component</h2>
+<pre><code class="language-jsx">import React, { useState } from &quot;react&quot;;
+// other imports
+
+// require or decomposing object
+const _ = require('lodash');
+const { Content } = Layout;
+
+// local constant
+const MAX_ITEMS = 20;
+
+function About(props) {
+  // 1. decompose props
+  const {name,path,description} = props;
+  // 2. hook for states
+  const [loading, setLoading] = useState(false);
+  const {username} = useSelector(state=&gt;state);
+  const func = useMemo(()=&gt;{},[]);
+
+  //3. useEffect
+  useEffect(()=&gt;{
+    func();
+  },[]);
+
+  // 4. helper functions
+  const submitForm = (form)=&gt;{
+    // 
+  }
+
+  // 5. event methods
+  const onFinish = ()=&gt;{
+    submitForm(form)
+  }
+
+  const onClick = ()=&gt;{
+
+  };
+
+  // 6. data transformation for complicated data structure
+  const birthplaces = users.map(user=&gt;user.info?.birthplaces);
+
+  // 7. if a component has too many props, extract them into a object and define it here
+  const aboutSubProps = {
+    name,
+    path,
+    loading,
+    setLoading,
+    //...
+  };
+
+  // 8. if the returned jsx is too long, extract some of them into constant here
+  const LeftSideBar = (&lt;div&gt;{/* around 10-50 lines of code */}&lt;/div&gt;);
+
+  // 9. return 
+  return &lt;div&gt;
+    {LeftSideBar}
+    &lt;AboutSub {...aboutSubProps} /&gt;
+  &lt;/div&gt;
+}
+</code></pre>
+<p>The react component can be written as above.</p>
+<p>If the <code>.tsx</code> file is more than 250 lines, consider a refactoring.</p>
+<h2 id="scss-file">Scss file</h2>
+<p>defined class as <code>kebab-case</code>, like <code>about-header</code>. Then use the class in jsx like:</p>
+<pre><code class="language-jsx">import styles from './index.module.scss'
+
+//...
+&lt;div className={styles[&quot;about-header&quot;]} &gt;&lt;/div&gt;
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../vre-infra/" class="btn btn-neutral float-left" title="vre-infra"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../service_entityinfo/" class="btn btn-neutral float-right" title="service_entityinfo">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../vre-infra/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../service_entityinfo/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

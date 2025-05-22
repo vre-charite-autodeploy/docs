@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>service_upload - VRE Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "service_upload";
+        var mkdocs_page_input_path = "service_upload.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> VRE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">VRE Charité Repositories</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../helm-charts/">helm-charts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../vre-infra/">vre-infra</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../frontend_vre_home/">frontend_vre_home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_entityinfo/">service_entityinfo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../library_common/">library_common</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_scheduled_tasks/">service_scheduled_tasks</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataops_gr/">service_dataops_gr</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataops_utility/">service_dataops_utility</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../core/">core</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_auth/">service_auth</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_download/">service_download</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_pipelinewatch/">service_pipelinewatch</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_common/">service_common</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataset_neo4j/">service_dataset_neo4j</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_encryption/">service_encryption</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_notification/">service_notification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_approval/">service_approval</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_dataset/">service_dataset</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_provenance/">service_provenance</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">service_upload</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_kg/">service_kg</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_hpc/">service_hpc</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_cataloguing/">service_cataloguing</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_queue/">service_queue</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../service_logger/">service_logger</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../docs/">docs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../release-archive/">release-archive</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../.github/">.github</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Documentation Files</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../vre-infra_DEPLOYMENT/">vre-infra - DEPLOYMENT.md</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../docs_vre-documentation/">docs - vre-documentation.md</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">VRE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">VRE Charité Repositories</li>
+      <li class="breadcrumb-item active">service_upload</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="service_upload">service_upload</h1>
+<!--
+ Copyright 2022 Indoc Research
+
+ Licensed under the EUPL, Version 1.2 or – as soon they
+ will be approved by the European Commission - subsequent
+ versions of the EUPL (the "Licence");
+ You may not use this work except in compliance with the
+ Licence.
+ You may obtain a copy of the Licence at:
+
+ https://joinup.ec.europa.eu/collection/eupl/eupl-text-eupl-12
+
+ Unless required by applicable law or agreed to in
+ writing, software distributed under the Licence is
+ distributed on an "AS IS" basis,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ express or implied.
+ See the Licence for the specific language governing
+ permissions and limitations under the Licence.
+
+-->
+
+<h1 id="upload-service">Upload Service</h1>
+<p><a href="https://www.gnu.org/licenses/agpl-3.0"><img alt="License: AGPL v3" src="https://img.shields.io/badge/License-AGPL_v3-blue.svg?style=for-the-badge" /></a>
+<a href="https://www.python.org/"><img alt="Python 3.7" src="https://img.shields.io/badge/python-3.7-green?style=for-the-badge" /></a></p>
+<p>This service is built for file data uploading purpose. It's built using the FastAPI python framework.</p>
+<h1 id="about-the-project">About The Project</h1>
+<p>The upload service is one of the component for PILOT project. The main responsibility is to handle the file upload(especially large file). The main machanism for uploading is to chunk up the large file(&gt;2MB). It has three main api for pre-uploading, uploading chunks and combining the chunks. After combining the chunks, the api will upload the file to <a href="https://min.io/">Minio</a> as the Object Storage.</p>
+<h2 id="built-with">Built With</h2>
+<ul>
+<li>
+<p><a href="https://min.io/">Minio</a>: The Object Storage to save the data</p>
+</li>
+<li>
+<p><a href="https://fastapi.tiangolo.com">Fastapi</a>: The async api framework for backend</p>
+</li>
+<li>
+<p><a href="https://python-poetry.org/">poetry</a>: python package management</p>
+</li>
+</ul>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="prerequisites">Prerequisites</h2>
+<ol>
+<li>The project is using poetry to handle the package. <strong>Note here the poetry must install globally not in the anaconda virtual environment</strong></li>
+</ol>
+<pre><code>pip install poetry
+</code></pre>
+<ol>
+<li>create the <code>.env</code> file from <code>.env.schema</code></li>
+</ol>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>
+<p>git clone the project:
+ <code>git clone https://github.com/PilotDataPlatform/upload.git</code></p>
+</li>
+<li>
+<p>install the package:
+ <code>poetry install</code></p>
+</li>
+<li>
+<p>run it locally:
+ <code>poetry run python run.py</code></p>
+</li>
+</ol>
+<h2 id="docker">Docker</h2>
+<p>To package up the service into docker pod, running following command:</p>
+<pre><code>docker build --build-arg pip_username=&lt;pip_username&gt; --build-arg pip_password=&lt;pip_password&gt;
+</code></pre>
+<h2 id="api-documents">API Documents</h2>
+<p>REST API documentation in the form of Swagger/OpenAPI can be found here: <a href="https://pilotdataplatform.github.io/api-docs/">Api Document</a></p>
+<h2 id="helm-charts">Helm Charts</h2>
+<p>Components of the Pilot Platform are available as helm charts for installation on Kubernetes: <a href="https://github.com/PilotDataPlatform/helm-charts/tree/main/upload-service">Upload Service Helm Charts</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../service_provenance/" class="btn btn-neutral float-left" title="service_provenance"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../service_kg/" class="btn btn-neutral float-right" title="service_kg">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../service_provenance/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../service_kg/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
